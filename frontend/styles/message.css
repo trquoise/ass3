@@ -1,0 +1,134 @@
+.message-list{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 70vh;
+    overflow: auto;
+
+}
+.channel-item{
+    border: 1px solid gray;
+    width: 80%;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.channel-info{
+    height: 15vh;
+}
+.message-bottom{
+    bottom: 0;
+    width:95vw;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+}
+.message-input{
+    width: 50vw;
+    float: left;
+    margin-left: 7vw;
+}
+.message-send{
+    width: 15vw;
+    height: 5vh;
+    float: right;
+    margin-right: 8vw;
+}
+
+.message-item{
+    border: 1px solid gray;
+    width: 80%;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+
+}
+
+.message-title{
+
+}
+.message-bio{
+    max-width: 80%;
+    overflow: hidden;
+}
+.message-first-line{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.message-sender{
+    margin-left: -7vw;
+    margin-top: 1vh;
+}
+.message-button{
+    margin-left: 60vw;
+    float: right;
+    width: 50vw;
+}
+.message-pin-button{
+    float: right;
+    margin-left: 1vw;
+    width: 5vw;
+}
+.message-edit-button{
+    float: right;
+    margin-left: 1vw;
+    width: 5vw;
+}
+.dialog-message-edit{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fafafa;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+.message-update{
+    width: 100%;
+}
+.message-user-logo{
+    margin-right: 80px;
+    width: 36px;
+    height: 36px;
+    margin-top: 1vh;
+    border-radius: 30px;
+}
+.message-pinned{
+    border: blue 1px solid;
+}
+.react-symbol{}
+.react-symbol:hover{
+    cursor: pointer;
+}
+.react-line{
+    display: flex;
+    flex-direction: row;
+}
+.message-user-logo{cursor: pointer}
+.image-send{
+    float: left;
+    margin-left: 7vw;
+}
+.image-message{
+    width: 100%;
+    cursor: pointer;
+}
+.image-message.enlarged {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 2;
+    cursor: pointer;
+}
+

@@ -1,0 +1,10 @@
+.page{
+    display: none;
+    background-color: #eeeeee;
+  }
+
+.page2{
+    display: none;
+    height: 95vh;
+    background-color: #eeeeee;
+}

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Slackr</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- You can add your styles and scripts here -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="./styles/loginpage.css">
+  <link rel="stylesheet" href="./styles/registerpage.css">
+  <link rel="stylesheet" href="./styles/page.css">
+  <link rel="stylesheet" href="./styles/home.css">
+  <link rel="stylesheet" href="./styles/channel.css">
+  <link rel="stylesheet" href="./styles/message.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="styles/provided.css" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script type="module" src="./src/pagechange.js"></script>
+  <script type="module" src="./src/helpers.js"></script>
+  <script type="module" src="./src/home.js"></script>
+  <script type="module" src="./src/login.js"></script>
+  <script type="module" src="./src/register.js"></script>
+  <script type="module" src="./src/request.js"></script>
+  <script type="module" src="./src/channel.js"></script>
+  <script type="module" src="./src/user.js"></script>
+  <script type="module" src="./src/img.js"></script>
+</head>
+
+<body>
+  <!--nav bar-->
+  <header class="banner">
+
+  </header>
+  <main role="main">
+    <!-- create channel page -->
+    <div class="page createChannel">
+      <div class="header">
+        <img class="user-logo" alt="user-logo" src="" />
+        <div class="logout_btn">log out</div>
+      </div>
+      <div class="page_container">
+        <h1>Create Channel</h1>
+        <input type="text" id="create-name" placeholder="name">
+        <div class="private_wrap"><span>private</span>
+          <input type="radio" id="create-private-true" name="private" value="true">true
+          <input type="radio" id="create-private-false" name="private" checked value="false">false
+        </div>
+        <input type="text" id="create-description" placeholder="description"></input>
+        <button type="button" id="create_button" class="CreateChannel btn-primary">CreateChannel</button>
+      </div>
+    </div>
+
+    <!-- Login page -->
+
+    <div class="page login" id="page-login">
+      <div class="login-page">
+        <h1>Login</h1>
+        <input type="text" id="login-email" placeholder="Email">
+        <input type="password" id="login-password" placeholder="Password">
+        <button type="button" id="login-button" class="btn btn-primary">Login</button>
+        <button type="button" id="goreg-button" class="btn btn-warning">Go to register</button>
+      </div>
+    </div>
+
+    <!-- Registration page -->
+    <div class="page register">
+      <div class="register-page">
+        <h1>Register Page</h1>
+        <input type="text" id="reg-email" placeholder="Email">
+        <input type="text" id="reg-name" placeholder="Name">
+        <input type="password" id="reg-password" placeholder="Password">
+        <input type="password" id="confirm-password" placeholder="Confirm Password">
+        <button type="button" id="reg-button" class="btn btn-primary">Register</button>
+      </div>
+    </div>
+
+    <!-- channel page -->
+    <div class="page channel">
+      <div class="dialog-message-edit" id="user-info">
+        <input  class="image-send" type = "file" accept = "image/*" id="imgSender3">
+        <div><img id="user-info-img2" class="user-img"></div>
+        <div><input type="text" id="user-name2" placeholder="name..." class="message-update"></div>
+        <div><input type="text" id="user-bio2" placeholder="bio..." class="message-update"></div>
+        <div><input type="text" id="user-email2" placeholder="email..." class="message-update"></div>
+        <div><input type="password" id="user-password2" placeholder="Password"></div>
+        <button type="button" id="update_user_button2" class="update-button btn-primary">update</button>
+        <button type="button" id="close_button4" class="close-button btn-primary">close</button>
+      </div>
+            <div class="header">
+              <img class="user-logo" alt="user-logo" src="./img/head.png"  id="user-logo"/>
+              <div class="logout_btn" id="logout-button2">log-out</div>
+            </div>
+            <div class="page_container">
+              <div class="nothing">there is nothing</div>
+
+              <button type="button" id="goto_create_button" class="CreateChannel btn-primary">CreateChannel</button>
+
+              <main id="channelList" class="channel-list">
+              </main>
+              <!-- <p>home page</p> -->
+            </div>
+
+    </div>
+
+    <div class="page2 message">
+      <div class="dialog-message-edit" id="user-info3">
+        <div><img id="user-info-img3" class="user-img"></div>
+        <div>userName: <div id="user-name3"  class="message-update"></div></div>
+        <div>userBio: <div id="user-bio3"  class="message-update"></div></div>
+        <div>userEmail: <div id="user-email3"  class="message-update"></div></div>
+        <button type="button" id="close_button6" class="close-button btn-primary">close</button>
+      </div>
+      <div class="dialog-message-edit" id="user-info2">
+        <input  class="image-send" type = "file" accept = "image/*" id="imgSender2">
+        <div><img id="user-info-img1" class="user-img"></div>
+        <div><input type="text" id="user-name" placeholder="name..." class="message-update"></div>
+        <div><input type="text" id="user-bio" placeholder="bio..." class="message-update"></div>
+        <div><input type="text" id="user-email" placeholder="email..." class="message-update"></div>
+        <div><input type="password" id="user-password" placeholder="Password"></div>
+        <button type="button" id="update_user_button" class="update-button btn-primary">update</button>
+        <button type="button" id="close_button5" class="close-button btn-primary">close</button>
+      </div>
+      <div class="dialog-message-edit" id="channel-invite">
+        <label for="users">select users:</label>
+        <select id="users" class="select-box" multiple>
+        </select>
+        <button type="button" id="invite_channel_button" class="update-button btn-primary">invite</button>
+        <button type="button" id="close_button3" class="close-button btn-primary">close</button>
+      </div>
+      <div class="dialog-message-edit" id="channel-edit">
+        <div><input type="text" id="channel-update-name" placeholder="name..." class="message-update"></div>
+        <div><input type="text" id="channel-update-description" placeholder="description..." class="message-update"></div>
+        <button type="button" id="update_channel_button" class="update-button btn-primary">update</button>
+        <button type="button" id="close_button1" class="close-button btn-primary">close</button>
+      </div>
+      <div class="dialog-message-edit" id="message-edit">
+        <div><input type="text" id="message-name" placeholder="edit..." class="message-update"></div>
+        <button type="button" id="update_message_button" class="update-button btn-primary">update</button>
+        <button type="button" id="delete_message_button" class="update-button btn-primary">delete</button>
+        <button type="button" id="close_button2" class="close-button btn-primary">close</button>
+      </div>
+      <div class="header">
+
+        <img class="user-logo" alt="user-logo" src="./img/head.png" id="user-logo2"/>
+        <div class="logout_btn" id="logout-button">log-out</div>
+      </div>
+      <div class="page_container">
+        <div class="channel-info">
+          <div class="channel-name" id="channel-name"></div>
+          <div class="channel-bio" id="channel-bio"></div>
+          <div class="channel-time" id="channel-time"></div>
+          <div class="last-line">
+            <div class="channel-creator" id="channel-creator"></div>
+            <button class="channel-edit-button" id="channel-edit-button">edit</button>
+            <button class="channel-invite-button" id="channel-invite-button">invite</button>
+          </div>
+        </div>
+
+        <main id="messageList" class="message-list">
+        </main>
+        <div class="message-bottom">
+          <input class="message-input" id="message-input">
+          <button class="message-send" id="message-send">message send</button>
+          <input  class="image-send" type = "file" accept = "image/*" id="imgSender">
+        </div>
+        <!-- <p>home page</p> -->
+      </div>
+
+    </div>
+
+
+  </main>
+  <footer>
+    <p>&copy; Slackr</p>
+  </footer>
+  <script type="module" src="src/main.js"></script>
+  <script>
+    const images = document.querySelectorAll(".image-message");
+    images.forEach(image => {
+      image.addEventListener("click", function() {
+        if (this.classList.contains("enlarged")) {
+          this.classList.remove("enlarged");
+        } else {
+          this.classList.add("enlarged");
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
